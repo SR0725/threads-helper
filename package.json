@@ -1,0 +1,25 @@
+{
+  "name": "threads-viral-detector",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Threads 爆文偵測器 - 智慧偵測 Threads 平台上的熱門與潛力爆文",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@types/webextension-polyfill": "^0.10.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "~5.6.3",
+    "vite": "^5.0.0",
+    "vite-plugin-web-extension": "^4.0.0",
+    "webextension-polyfill": "^0.10.0"
+  }
+}

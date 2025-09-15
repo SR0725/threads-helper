@@ -1,0 +1,39 @@
+{
+  "{{chrome}}.manifest_version": 3,
+  "{{firefox}}.manifest_version": 2,
+  "name": "Threads 爆文偵測器",
+  "description": "智慧偵測 Threads 平台上的熱門與潛力爆文，幫助您快速發現值得關注的內容，另外也能導出你自己個人文章中的所有寫過的貼文（包藍按讚數、分享數的數據）可以用在其他地方的分析。",
+  "version": "1.0.0",
+  "icons": {
+    "48": "icon/icon-48x48.png",
+    "72": "icon/icon-72x72.png",
+    "96": "icon/icon-96x96.png",
+    "128": "icon/icon-128x128.png"
+  },
+  "{{chrome}}.action": {
+    "default_popup": "src/popup.html"
+  },
+  "{{firefox}}.browser_action": {
+    "default_popup": "src/popup.html"
+  },
+  "background": {
+    "{{chrome}}.service_worker": "src/background.ts",
+    "{{firefox}}.scripts": ["src/background.ts"]
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.threads.com/*"],
+      "js": ["src/content.ts"]
+    }
+  ],
+  "{{chrome}}.web_accessible_resources": [
+    {
+      "resources": ["buymeacoffee.png"],
+      "matches": ["https://www.threads.com/*"]
+    }
+  ],
+  "{{firefox}}.web_accessible_resources": ["buymeacoffee.png"]
+}
